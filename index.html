@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RO’Lyfe Buyer Network OS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<div class="app">
+  <h1>👥 RO’Lyfe Buyer Network OS</h1>
+  <p class="sub">Source → Match → Fund → Close</p>
+
+  <div class="card">
+    <h2>Add Buyer / Contractor</h2>
+
+    <input id="name" placeholder="Name">
+    <input id="phone" placeholder="Phone">
+    <input id="email" placeholder="Email">
+    <input id="company" placeholder="Company">
+
+    <select id="role">
+      <option>Cash Buyer</option>
+      <option>Contractor Buyer</option>
+      <option>Fix & Flip Investor</option>
+      <option>Landlord / DSCR Buyer</option>
+      <option>Agent Buyer</option>
+      <option>Lender Referral</option>
+    </select>
+
+    <input id="area" placeholder="Target Area">
+    <input id="maxPrice" placeholder="Max Buy Price">
+    <input id="notes" placeholder="Notes / Buy Box">
+
+    <button onclick="addBuyer()">➕ Add Contact</button>
+  </div>
+
+  <div class="card">
+    <h2>📲 Deal Blast</h2>
+    <textarea id="dealMsg" placeholder="Paste deal here..."></textarea>
+    <button onclick="copyBlast()">Copy Blast Message</button>
+  </div>
+
+  <div class="card">
+    <h2>📋 Buyer Network</h2>
+    <div id="buyerList"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
