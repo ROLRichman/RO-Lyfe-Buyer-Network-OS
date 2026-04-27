@@ -9,69 +9,87 @@
 <body>
 
 <div class="app">
+  <h1>👥 RO’Lyfe Buyer Network OS</h1>
+  <p class="sub">Source → Match → Fund → Close</p>
 
-<h1>👥 RO’Lyfe Buyer Network OS</h1>
-<p class="sub">Source → Match → Fund → Close</p>
+  <div class="card">
+    <h2>📥 Buyer / Contractor Intake</h2>
+    <p class="small">Public intake link for buyers, contractors, agents, landlords, and funding partners.</p>
+    <button onclick="openBuyerIntake()">📥 Open Intake</button>
+    <button onclick="copyBuyerIntake()">📋 Copy Intake Link</button>
+  </div>
 
-<!-- ADD BUYER -->
-<div class="card">
-<h2>Add Buyer / Contractor</h2>
+  <div class="card">
+    <h2>➕ Add Buyer / Contractor</h2>
 
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<input id="email" placeholder="Email">
-<input id="company" placeholder="Company">
+    <input id="name" placeholder="Name">
+    <input id="phone" placeholder="Phone">
+    <input id="email" placeholder="Email">
+    <input id="company" placeholder="Company">
 
-<select id="role">
-<option>Cash Buyer</option>
-<option>Contractor Buyer</option>
-<option>Fix & Flip Investor</option>
-<option>Landlord / DSCR Buyer</option>
-<option>Agent Buyer</option>
-<option>Lender Referral</option>
-</select>
+    <select id="role">
+      <option>Cash Buyer</option>
+      <option>Contractor Buyer</option>
+      <option>Fix & Flip Investor</option>
+      <option>Landlord / DSCR Buyer</option>
+      <option>Agent Buyer</option>
+      <option>Lender Referral</option>
+    </select>
 
-<input id="area" placeholder="Target Area">
-<input id="maxPrice" placeholder="Max Buy Price">
-<input id="notes" placeholder="Buy Box / Notes">
+    <select id="tag">
+      <option>VIP</option>
+      <option>A Buyer</option>
+      <option>B Buyer</option>
+      <option>New Lead</option>
+      <option>Do Not Send</option>
+    </select>
 
-<button onclick="addBuyer()">➕ Add Contact</button>
-</div>
+    <input id="area" placeholder="Target Area">
+    <input id="maxPrice" placeholder="Max Buy Price">
+    <input id="rehabLevel" placeholder="Rehab Level: Light / Medium / Heavy">
+    <input id="notes" placeholder="Buy Box / Notes">
 
-<!-- DEAL INPUT -->
-<div class="card">
-<h2>📊 Match Deal</h2>
+    <button onclick="addBuyer()">➕ Add Contact</button>
+  </div>
 
-<input id="dealArea" placeholder="Deal Area">
-<input id="dealPrice" placeholder="Deal Price">
+  <div class="card">
+    <h2>🔥 Deal Match Engine</h2>
 
-<button onclick="matchDeal()">🔎 Match Buyers</button>
+    <input id="dealAddress" placeholder="Deal Address">
+    <input id="dealArea" placeholder="Deal Area">
+    <input id="dealPrice" placeholder="Deal Price">
+    <input id="dealARV" placeholder="ARV">
+    <input id="dealRehab" placeholder="Estimated Rehab">
 
-<div id="matchResults"></div>
-</div>
+    <button onclick="matchDeal()">🔎 Match Buyers</button>
+    <button onclick="buildDealBlast()">⚡ Build Deal Blast</button>
 
-<!-- DEAL BLAST -->
-<div class="card">
-<h2>📲 Deal Blast</h2>
+    <div id="matchResults"></div>
+  </div>
 
-<textarea id="dealMsg" placeholder="Paste deal here..."></textarea>
+  <div class="card">
+    <h2>📲 Deal Blast</h2>
+    <textarea id="dealMsg" placeholder="Deal blast message will appear here..."></textarea>
 
-<button onclick="copyBlast()">📋 Copy</button>
-<button onclick="sendEmailBlast()">📧 Email</button>
-<button onclick="sendSMSBlast()">📲 Text</button>
-</div>
+    <button onclick="copyBlast()">📋 Copy Blast</button>
+    <button onclick="sendEmailBlast()">📧 Email Blast</button>
+    <button onclick="sendSMSBlast()">📲 Text Blast</button>
+  </div>
 
-<!-- BUYER LIST -->
-<div class="card">
-<h2>📋 Buyer Network</h2>
+  <div class="card">
+    <h2>📋 Buyer Network</h2>
 
-<input id="search" placeholder="Search buyers..." onkeyup="filterBuyers()">
+    <input id="search" placeholder="Search buyers..." onkeyup="filterBuyers()">
 
-<div id="buyerList"></div>
-</div>
+    <div class="mini-row">
+      <button onclick="exportBuyers()">📤 Copy Buyer List</button>
+      <button onclick="clearAllBuyers()">🗑️ Clear All</button>
+    </div>
 
+    <div id="buyerList"></div>
+  </div>
 </div>
 
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
